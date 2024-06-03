@@ -1,10 +1,41 @@
+"""
+    Para la prueba el primer paso es crear un entorno virtual.
+
+    Active el entorno virtual e instale las dependencias.
+
+    Para correr todas la pruebas coloque en la consola a nivel del proyecto: pytest
+
+    La prueba tiene 4 partes:
+        1 - Un conversos de Celcius a Farenheit y de Farenheit a Celcius
+        2 - Una suma recursiva
+        3 - Un contador de propiedades
+        4 - Un reto de Clases
+
+    No debe cambiar los nombres de las funciones.
+    Debajo de cada funcion hay un camndo para ejecutar las pruebas de esa funcion unicamente.
+
+    CONSEJO: Todos los retos fueron probados y tienen solucion, tomese su tiempo para encontrar las soluciones.
+    Las pruebas te daran pistas importantes de como resolver los retos planteados.
+
+    IMPORTANTE: No hacer uso de IAs, digase ChatGPT, Gemini, Copilot etc..., nos interesa conocer tu manejo de
+    logica, ademas de que la sintaxis la puedes buscar en la documetacion o en StackOverflow.
+"""
+
+
 ### NOTA:  En todas las funciones es importante retornar el valor esperado.
 
+### NOTA2: Bajo ningun concepto manipule el archivo de test_main.py
+
+###################################################################
+###################################################################
+###################################################################
+
+#  RETO 1
 
 """
 Esta es un conversor de Celcius a Farenheit y de Farenheit a Celcius,
-debe recibir dos parametros, el primero de tipo Boolean, el segudo 
-puede ser in Entero o un numero Flotante
+debe recibir dos parametros, el primero de tipo Boolean, el segundo 
+puede ser un numero Entero o un numero Flotante
 
 Si el primer parametro es True
 se realiza una conversion de F a C, 
@@ -26,6 +57,8 @@ def temp_conversor(farehnt, temp) -> float:
 ###################################################################
 ###################################################################
 
+# RETO 2
+
 """
 En suma recursiva la funcion recibe una lista con distintos tipos de datos, 
 a veces será una lista dentro de otra lista (array en otros lenguajes).
@@ -39,6 +72,8 @@ No siempre los elementos son numeros.
 
 La recursion es un elemento importante para este reto.
 """
+
+
 def suma_recursiva(data: list) -> int:
     def recursion(data):
         sum = 0
@@ -57,14 +92,18 @@ def suma_recursiva(data: list) -> int:
 ###################################################################
 ###################################################################
 
+# RETO 3
+
 """
 En este ejercicio primero debe abrir el archivo 'mails.txt'. (Te dimos echa esa parte)
+
 Buscar las lineas que empiecen por 'From' y tomar el email que ahi aparece.
 
 Luego debe insertarlo en un diccionario e ir contando la cantidad de veces que aparece ese email.
 
-por ejemplo: {unemail@email.com: 1, otroemail@email: 5}
+Por ejemplo: {unemail@email.com: 1, otroemail@email: 5}
 """
+
 def property_counter() -> dict:
     my_dict = {}
     file = open("mails.txt")
@@ -88,21 +127,27 @@ def property_counter() -> dict:
 """
     Esta prueba se basa en clases.
 
-    Debe crear la primera clase 'Vehicle', debe recibir una serie de parametros:
+    Debe crear la primera clase 'Vehicle', debe recibir y poseer una serie de parametros:
         name
         max_speed
         km
 
-    Luego debe crear las siguientes clases que heredan 'Vehicle' y suman un parametro 'medium':
+        Debe tener el metodo start_engine():
+            Si el engine esta en on debe enviar el siguiente msj: "Engine alredy on"
+                
+            Si esta en off envia el siguiente msj: <nombre> engine started"
+            Ademas debe cambiar el estado del engine a true
+
+    Luego debe crear las siguientes clases que heredan 'Vehicle' y suman un parametro 'medium' (este parametro solo lo poseen las clases que heredan):
         
     1- 'Car' que debe tener un metodo llamado 'is_running' y devueleve un string con:
-        '<nombre_de_la_clase> is running at <maxima_velocidad> kmh'
+        '<nombre> is running at <maxima_velocidad> kmh'
 
     2- 'Airplane' que debe tener un metodo llamado 'is_flying' y devueleve un string con:
-        '<nombre_de_la_clase> is flying at <maxima_velocidad> kmh'
+        '<nombre> is flying at <maxima_velocidad> kmh'
 
     3- 'Boat' que debe tener un metodo llamado 'is_navigating' y devueleve un string con:
-        '<nombre_de_la_clase> is navigating at <maxima_velocidad> kmh'
+        '<nombre> is navigating at <maxima_velocidad> kmh'
 """
 
 class Vehicle:
@@ -114,15 +159,14 @@ class Vehicle:
 
     def start_engine(self):
         if self.engine: 
-            "Engine alredy on"
-            return
+            return "Engine alredy on"
+            
         self.engine = True
         return f"{self.name} engine started"
     
     def start_stop(self):
         if not self.engine: 
-            "Engine alredy off"
-            return
+            return "Engine alredy off"
         self.engine = True
         return f"{self.name} engine stoped"
     

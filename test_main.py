@@ -1,5 +1,5 @@
 # import pytest
-from intro import *
+from main import *
 
 def test_temp_conversor():
     assert temp_conversor(True, 95) == 203 , "TEST 1.1 -El valor para los grados en Fahrenheit no es correcto"
@@ -31,7 +31,7 @@ def test_class():
     assert isinstance(avion, Ariplain), "El nombre de la Clase Airplane debe ser 'Ariplain'"
     assert avion.engine == False, "El 'engine' debe empezar en False."
     assert avion.start_engine() == f"{avion.name} engine started", "Las cadenas no son iguales"
-    assert avion.engine == True
+    assert avion.engine == True, "El 'engine' no inicio (TRUE)"
     assert avion.medium == "air"
     assert avion.is_flying() == "Boeing is flying at 400 kmh", "Las cadenas no son iguales"
 
@@ -40,7 +40,8 @@ def test_class():
     assert isinstance(carro, Car), "El nombre de la Clase Car debe ser 'Car'"
     assert carro.engine == False, "El 'engine' debe empezar en False."
     assert carro.start_engine() == f"{carro.name} engine started", "Las cadenas no son iguales"
-    assert carro.engine == True
+    assert carro.start_engine() == "Engine alredy on", "El engine no esta encendido"
+    assert carro.engine == True, "El 'engine' no inicio (TRUE)"
     assert carro.medium == "land"
     assert carro.is_running() == "Mustang is running at 300 kmh", "Las cadenas no son iguales"
 
@@ -49,6 +50,6 @@ def test_class():
     assert isinstance(barco, Boat), "El nombre de la Clase Boat debe ser 'Boat'"
     assert barco.engine == False, "El 'engine' debe empezar en False."
     assert barco.start_engine() == f"{barco.name} engine started", "Las cadenas no son iguales"
-    assert barco.engine == True
+    assert barco.engine == True, "El 'engine' no inicio (TRUE)"
     assert barco.medium == "Water"
     assert barco.is_navigating() == "Barquito is navigating at 20 nocks", "Las cadenas no son iguales"
