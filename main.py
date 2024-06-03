@@ -44,12 +44,9 @@ si es False lo opuesto.
 El segundo parametro es la temperatura a recibir.
 
 """
-def temp_conversor(farehnt, temp) -> float:
-    if farehnt : r = (9/5) * temp + 32
-    else: r = (temp - 32) / 1.8
-
-    return round(r, 2)
+def temp_conversor() -> float:
     pass
+
 # pytest -k temp_conversor
 
 
@@ -75,16 +72,7 @@ La recursion es un elemento importante para este reto.
 
 
 def suma_recursiva(data: list) -> int:
-    def recursion(data):
-        sum = 0
-        for element in data:
-            if isinstance(element, list):
-                sum += recursion(element)
-            elif  isinstance(element, int):
-                sum += element
-
-        return sum
-    return recursion(data)
+    pass
 
 # pytest -k suma_recursiva
 
@@ -107,16 +95,7 @@ Por ejemplo: {unemail@email.com: 1, otroemail@email: 5}
 def property_counter() -> dict:
     my_dict = {}
     file = open("mails.txt")
-    for line in file:
-        if line.startswith("From"):
-            line = line.split()
-            for word in line:
-                if "@" in word:
-                    if word in my_dict:
-                        my_dict[word] += 1
-                    else:
-                        my_dict[word] = 1
-    return my_dict
+    pass
 
 # pytest -v -k property_counter()
 # pytest -vv -k property_counter()
@@ -151,53 +130,16 @@ def property_counter() -> dict:
 """
 
 class Vehicle:
-    def __init__(self, name, max_speed, km) -> None:
-        self.name = name
-        self.max_speed = max_speed
-        self.km = km
-        self.engine = False
-
-    def start_engine(self):
-        if self.engine: 
-            return "Engine alredy on"
-            
-        self.engine = True
-        return f"{self.name} engine started"
+    pass
     
-    def start_stop(self):
-        if not self.engine: 
-            return "Engine alredy off"
-        self.engine = True
-        return f"{self.name} engine stoped"
-    
-    
-class Ariplain(Vehicle):
-    def __init__(self, name, max_speed, km, medium) -> None:
-        super().__init__(name, max_speed, km)
+class Car:
+    pass
 
-        self.medium = medium
+class Boat:
+    pass
 
-    def is_flying(self) -> str:
-        msj = f"{self.name} is flying at {self.max_speed} kmh"
-        return msj
-
-class Car(Vehicle):
-    def __init__(self, name, max_speed, km, medium) -> None:
-        super().__init__(name, max_speed, km)
-
-        self.medium = medium
-
-    def is_running(self) -> str:
-        return f"{self.name} is running at {self.max_speed} kmh"
-
-class Boat(Vehicle):
-    def __init__(self, name, max_speed, km, medium) -> None:
-        super().__init__(name, max_speed, km)
-
-        self.medium = medium
-
-    def is_navigating(self) -> str:
-        return f"{self.name} is navigating at {self.max_speed} nocks"
+class Airplane:
+    pass
     
 # pytest -k test_class
 

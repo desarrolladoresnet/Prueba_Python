@@ -26,9 +26,9 @@ def test_property_counter():
 
 
 def test_class():
-    avion = Ariplain("Boeing", 400, 5000.36, "air")
+    avion = Airplane("Boeing", 400, 5000.36, "air")
     assert isinstance(avion, Vehicle), "No hereda de 'Vehicle'"
-    assert isinstance(avion, Ariplain), "El nombre de la Clase Airplane debe ser 'Ariplain'"
+    assert isinstance(avion, Airplane), "El nombre de la Clase Airplane debe ser 'Airplane'"
     assert avion.engine == False, "El 'engine' debe empezar en False."
     assert avion.start_engine() == f"{avion.name} engine started", "Las cadenas no son iguales"
     assert avion.engine == True, "El 'engine' no inicio (TRUE)"
