@@ -1,0 +1,11 @@
+Apps mobiles
+
+React, Angular Ionic
+
+
+Integracion de chat
+Autogestion plataforma mobiles
+
+UBIPAGOS => pasarela de pagos
+
+https://ionicframework.com/
