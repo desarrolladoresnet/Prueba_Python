@@ -6,7 +6,7 @@
     Para correr todas la pruebas coloque en la consola a nivel del proyecto: pytest
 
     La prueba tiene 4 partes:
-        1 - Un conversos de Celcius a Farenheit y de Farenheit a Celcius
+        1 - Un conversor de Celcius a Farenheit y de Farenheit a Celcius
         2 - Una suma recursiva
         3 - Un contador de propiedades
         4 - Un reto de Clases
