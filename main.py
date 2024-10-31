@@ -79,7 +79,7 @@ def prime_numbers(number: int) -> list:
 ###################################################################
 ###################################################################
 
-# RETO 2
+# RETO 3
 
 """
 En suma recursiva la funcion recibe una lista con distintos tipos de datos, 
@@ -105,7 +105,7 @@ def suma_recursiva(data: list) -> int:
 ###################################################################
 ###################################################################
 
-# RETO 3
+# RETO 4
 
 """
 En este ejercicio primero debe abrir el archivo 'mails.txt'. (Te dimos echa esa parte)
