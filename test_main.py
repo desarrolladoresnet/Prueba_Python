@@ -8,6 +8,8 @@ def test_temp_conversor():
     assert temp_conversor(False, 37) == 2.78, "TEST 1.4 -El valor para los grados en Celcius no es correcto"
 
 
+def test_prime_numbers():
+    assert prime_numbers(100) == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97], "TEST 2.1 - resultado incorrecto"
 
 def test_suma_recursiva():
     assert suma_recursiva([1, 2, 3, 4, 5]) == 15, "TEST 2.1 - resultado incorrecto"

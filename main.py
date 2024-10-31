@@ -7,9 +7,10 @@
 
     La prueba tiene 4 partes:
         1 - Un conversor de Celcius a Farenheit y de Farenheit a Celcius
-        2 - Una suma recursiva
-        3 - Un contador de propiedades
-        4 - Un reto de Clases
+        2 - Un buscador de numeros primos
+        3 - Una suma recursiva
+        4 - Un contador de propiedades
+        5 - Un reto de Clases
 
     No debe cambiar los nombres de las funciones.
     Debajo de cada funcion hay un camndo para ejecutar las pruebas de esa funcion unicamente.
@@ -49,6 +50,30 @@ def temp_conversor() -> float:
 
 # pytest -k temp_conversor
 
+###################################################################
+###################################################################
+###################################################################
+
+# RETO 2
+
+"""
+    El siguiente reto se basa en obtener todos los numeros primos segun un rango dado
+    y  retornar una lista con los numeros primos encontrados.
+
+    Ya te damos los numeros iniciales con los que vas a trabajar.
+    Para esto omitimos el 0 y el 1 por facilidad y empezamos con el 2 y el 3.
+
+    No es obligatorio, pero implenta un contador y cuenta la cantidad de llamas que se hacen a la funcion.
+    Intenta que la misma sea lo mas eficiente posible.
+"""
+
+def prime_numbers(number: int) -> list:
+    primes = [2, 3]
+    counter = 0
+    
+    pass
+
+# pytest -k prime_numbers
 
 ###################################################################
 ###################################################################
